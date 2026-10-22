@@ -1,4 +1,4 @@
-from base_interface import Move, Strategy
+from strategy import Move, Strategy
 
 
 class AlwaysCooperate(Strategy):

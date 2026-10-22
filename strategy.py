@@ -1,9 +1,7 @@
 from abc import ABC, abstractmethod
-from enum import Enum
 
-class Move(Enum):
-    COOPERATE = "C"
-    BETRAY = "B"
+from moves import Move
+
 
 class Strategy(ABC):
     name: str = "unnamed"
