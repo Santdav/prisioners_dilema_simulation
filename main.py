@@ -2,12 +2,19 @@
 from itertools import combinations
 
 from game import Game
+from strategies.alwaysStrategies import AlwaysBetray, AlwaysCooperate
+from strategies.random import RandomStrategy
+from strategies.titForTat import TitForTat
 from tracker import Tracker
-from strategies import AlwaysCooperate, AlwaysBetray, TitForTat
+from strategies.others import *
+
 
 
 def main():
-    strategies = [AlwaysCooperate(), AlwaysBetray(), TitForTat()]
+    strategies = [
+    AlwaysCooperate(), AlwaysBetray(), TitForTat(),
+    Grudger(), TitForTwoTats(), Pavlov(), RandomStrategy(seed=42),
+]
 
     game = Game(rounds=200)   # standard payoffs by default
     tracker = Tracker()
